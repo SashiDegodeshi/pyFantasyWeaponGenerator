@@ -21,7 +21,7 @@ def keygen95():
 	else:
 		return keygen95()
 
-def keygen95oem(): #Even though the algorithm checks out, You may still get some losers that slip through
+def keygen95oem(): #Even though the algorithm checks out, You may still get some losers that slip through!
     threeSixSix = str(randrng(366))
     if int(threeSixSix) <= 99:
         threeSixSix = '0' + str(threeSixSix)
