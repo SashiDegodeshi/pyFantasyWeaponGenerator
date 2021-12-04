@@ -21,7 +21,7 @@ def keygen95():
 	else:
 		return keygen95()
 
-def keygen95oem():
+def keygen95oem(): #Even though the algorithm checks out, You may still get some losers that slip through
     threeSixSix = str(randrng(366))
     if int(threeSixSix) <= 99:
         threeSixSix = '0' + str(threeSixSix)
@@ -33,12 +33,12 @@ def keygen95oem():
     nintyFive = str(choice(['95', '96', '97', '98', '99', '00', '01', '02']))
     total = 0
     uselessFive = str(rand())[2:7]
-    theSeven = str(rand())[2:9]
+    theSeven = str(rand())[3:9]
     for i in list(str(theSeven)):
         total = total + int(i)
 
     if total % 7 == 0:
-        theKey = threeSixSix + nintyFive + '-OEM-' + theSeven + '-' + uselessFive
+        theKey = threeSixSix + nintyFive + '-OEM-0' + theSeven + '-' + uselessFive
         return theKey
     else:
         return keygen95oem()
